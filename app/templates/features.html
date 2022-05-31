@@ -1,0 +1,28 @@
+{% load static %}
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Por que nos escolher</h2>
+      <span>Why</span>
+      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
+    </div>
+    <div class="row">
+      <!-- Start featured -->
+      {% for f in lista_feature %}
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="featured-box">
+            <div class="featured-icon">
+              <i class="{{ f.icon_select }}"></i>
+            </div>
+            <div class="featured-content">
+              <div class="icon-o"><i class="lni-layout"></i></div>
+              <h4>{{ f.title }}</h4>
+              <p>{{ f.about }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <!-- End featured -->
+    </div>
+  </div>
+</section>

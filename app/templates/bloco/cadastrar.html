@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content %}
+    {% include 'header_all.html'%}
+    <body style="background-color:black;" >
+    {% bootstrap_messages %}
+        <section id="cadastro" class="section">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title" style="color:white;">Anotação</h2>
+            </div>
+            <div class=" services-item wow fadeInDown" data-wow-delay="0.2s">
+              <form method="post" class="form">
+                 {% csrf_token %}
+                 <h6 style="float: left;">Titulo</h6>
+                 {% bootstrap_field form.title %}
+                 <h6 style="float: left;">SubTitulo</h6>
+                 {% bootstrap_field form.sub_title %}
+                 <h6 style="float: left;">Descrição</h6>
+                 {% bootstrap_field form.note %}
+                 <h6 style="float: left;">Observação final</h6>
+                 {% bootstrap_field form.notice %}
+                 {% buttons %}
+                    <button type="submit" class="btn btn-primary">CADASTRAR</button>
+                   <a href="../"><button class="btn btn-primary" style="width:140px;">VOLTAR</button></a>
+                 {% endbuttons %}
+
+              </form>
+            </div>
+          </div>
+        </section>
+    </body>
+    {% include 'footer.html' %}
+{% endblock %}

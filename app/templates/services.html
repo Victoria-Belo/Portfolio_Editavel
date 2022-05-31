@@ -1,0 +1,24 @@
+{% load static %}
+    <!-- Services Section Start -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Sobre</h2>
+      <p class="section-subtitle">Registro de bloco e formatação de textos. Python + Bootstrap4 + MySQL</p>
+    </div>
+    <div class="row">
+      {% for l in lista %}
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="item-boxes services-item wow fadeInDown" data-wow-delay="0.2s">
+            <div class="icon color-1">
+              <i class="{{ l.icon_select }}"></i>
+            </div>
+            <h4>{{ l.title }}</h4>
+            <p>{{ l.about }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
