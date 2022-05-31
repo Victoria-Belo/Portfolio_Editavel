@@ -10,3 +10,6 @@ Esse administrador não precisa possuir nenhum conhecimento em linguagens de com
                   
 ➔ STATUS: Funcionando. Sujeito a alterações
 
+===========================================
+
+➔ TEMPLATE: Retirado de fontes gratuitas na internet. O objetivo principal do projeto é trabalhar no BACKEND.
